@@ -1,5 +1,9 @@
 package interface_examples;
 
-public class Series_Interface {
+public interface Series_Interface {
 
+	int getNext();
+	void reset();
+	void setStart(int x);
+	
 }
