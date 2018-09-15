@@ -14,6 +14,7 @@ public class Queue_Interface_Demo {
 
 		FixedQueue obj_fixq = new FixedQueue(3);
 		CircularQueue obj_circq = new CircularQueue(3);
+		DynamicQueue obj_dynq = new DynamicQueue(3);
 
 		// Fixed Queue Demo code starts
 		System.out.println("++++++++++++++++Fixed queue Demo Starts+++++++++++++++++++");
@@ -28,7 +29,7 @@ public class Queue_Interface_Demo {
 		obj_fixq.put('H');
 
 		// To print the fixed queue
-		System.out.println("Printing the Fixed queue:");
+		System.out.println("\nPrinting the Fixed queue:");
 		for (int i = 0; i < obj_fixq.qlength + 1; i++) {
 
 			System.out.print(obj_fixq.get());
@@ -46,22 +47,48 @@ public class Queue_Interface_Demo {
 		obj_circq.put('Z');
 
 		// To print the circular queue
-		System.out.println("Printing the Circular queue:");
+		System.out.println("\nPrinting the Circular queue:");
 		for (int j = 0; j < 3; j++) {
 
 			System.out.print(obj_circq.get());
 		}
-
+		System.out.println(
+				"\nConsumed all the messages in the circular Queue, Good to overwrite the queue with new messages");
 		obj_circq.put('R');
 		obj_circq.put('A');
 		obj_circq.put('J');
 
-		System.out.println("Printing the Circular queue:");
+		System.out.println("\nPrinting the Circular queue 2nd time:");
 		for (int j = 0; j < 3; j++) {
 
 			System.out.print(obj_circq.get());
 		}
 		// Circular Queue Demo code ends
+
+		// Dynamic Queue Demo code starts
+		System.out.println("\n++++++++++++++++Dynamic queue Demo Starts+++++++++++++++++++");
+		// To put the characters in Dynamic queue
+		System.out.println("Put starts");
+		obj_dynq.put('R');
+		obj_dynq.put('A');
+		obj_dynq.put('J');
+		obj_dynq.put('E');
+		obj_dynq.put('S');
+		obj_dynq.put('H');
+		obj_dynq.put(' ');
+		obj_dynq.put('R');
+		obj_dynq.put('A');
+		obj_dynq.put('M');
+		obj_dynq.put('A');
+		obj_dynq.put('N');
+
+		// To print the Dynamic queue
+		System.out.println("\nPrinting the Dynamic queue:");
+		for (int i = 0; i < obj_dynq.qlength + 1; i++) {
+
+			System.out.print(obj_dynq.get());
+		}
+		System.out.println("\n++++++++++++++++Dynamic queue Demo Ends+++++++++++++++++++");
 
 	}
 

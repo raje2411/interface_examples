@@ -39,7 +39,7 @@ public class CircularQueue implements Queue_Interface {
 			return;
 		}
 		q[putloc++] = input;
-		System.out.println("\nInserted character '" + input + "'into queue");
+		System.out.println("\nInserted character '" + input + "' into queue");
 		if (putloc == q.length) {
 			putloc = 0;
 		}
