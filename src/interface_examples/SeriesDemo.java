@@ -32,13 +32,17 @@ public class SeriesDemo {
 		for (int i = 0; i < 10; i++) {
 			System.out.println(ob_ref.getNext());
 		}
-		
+
 		System.out.println("Setting to start from 100 ByTwo object");
 		ob_ref = ob_bytwo;
-		ob_ref.setStart(99);;
+		ob_ref.setStart(99);
+		;
 		for (int i = 0; i < 10; i++) {
 			System.out.println(ob_ref.getNext());
+
 		}
+		ob_ref.showMsg(); // example to show interface default method. Default implementation is defined
+							// in Series_interface code.
 
 	}
 
